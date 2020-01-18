@@ -6,3 +6,5 @@
 
 * Internet Gauss Resources: https://faculty.washington.edu/ezivot/gaussfaq.htm  
 
+* Econometric Modeling with TS: https://www.cambridge.org/features/econmodelling/chapter1.htm (Gauss, R, Matlab code)  
+
