@@ -1,0 +1,1019 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\rightmargin 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+Econometric 1, Spring 2020
+\end_layout
+
+\begin_layout Title
+
+\series bold
+OLS Properties
+\end_layout
+
+\begin_layout Author
+Name: Jikhan Jeong
+\end_layout
+
+\begin_layout Section*
+1.
+ Positive Definite, Trace, Idempotent, Inverse, Matrix Derivative
+\end_layout
+
+\begin_layout Subsection*
+1.1 Positive Definite
+\end_layout
+
+\begin_layout Itemize
+X'X = Square Matrix = Postive Definite = Convex = Can be minimized
+\end_layout
+
+\begin_layout Itemize
+In OLS assumptions, we requires (X'X)
+\begin_inset Formula $^{-1}\rightarrow0$
+\end_inset
+
+ to derive consistency of Cov(
+\begin_inset Formula $\beta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+1.2 Trace
+\end_layout
+
+\begin_layout Itemize
+Trace(scalar 
+\begin_inset Formula $\times$
+\end_inset
+
+X) = scalar 
+\begin_inset Formula $\times$
+\end_inset
+
+ Trace(X)
+\end_layout
+
+\begin_layout Itemize
+Trace(X+Z) = Trace(X) + Trace(Z)
+\end_layout
+
+\begin_layout Itemize
+Trace(X') = Trace(C)
+\end_layout
+
+\begin_layout Itemize
+Trace(AB) = Trace(BA)
+\end_layout
+
+\begin_layout Itemize
+We need it when Cov(Y) = 
+\begin_inset Formula $\sigma^{2}I$
+\end_inset
+
+ = Cov(
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+) = E(
+\begin_inset Formula $\varepsilon\varepsilon'$
+\end_inset
+
+) , where E[Trace(e'Me)] = 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Trace[M]E(e'e)]= (n-k)E(e'e), where n = sample number, k = variable numbers
+ = column dim(X)
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+1.3 Idempotent Matrix
+\end_layout
+
+\begin_layout Itemize
+We need it when Cov(Y) = 
+\begin_inset Formula $\sigma^{2}I$
+\end_inset
+
+ = Cov(
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+) = E(
+\begin_inset Formula $\varepsilon\varepsilon'$
+\end_inset
+
+) , where E[Trace(e'M'Me)] = E[Trace(e'Me)]
+\end_layout
+
+\begin_layout Itemize
+P 
+\begin_inset Formula $\subset$
+\end_inset
+
+Idempotent Matrix, then P'P = P
+\end_layout
+
+\begin_layout Itemize
+P 
+\begin_inset Formula $\subset$
+\end_inset
+
+Idempotent Matrix, then I – P = M, M 
+\begin_inset Formula $\subset$
+\end_inset
+
+Idempotent Matrix
+\end_layout
+
+\begin_layout Subsection*
+1.4 Inverse Matrix
+\end_layout
+
+\begin_layout Itemize
+A = (A
+\begin_inset Formula $^{-1}$
+\end_inset
+
+)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+(A')
+\begin_inset Formula $^{-1}$
+\end_inset
+
+= (A
+\begin_inset Formula $^{-1}$
+\end_inset
+
+)'
+\end_layout
+
+\begin_layout Itemize
+(AB)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+=B
+\begin_inset Formula $^{-1}$
+\end_inset
+
+A
+\begin_inset Formula $^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+|A
+\begin_inset Formula $^{-1}$
+\end_inset
+
+| = 
+\begin_inset Formula $\frac{1}{|A|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+1.5 Matrix Derivative
+\end_layout
+
+\begin_layout Itemize
+From Prof.
+ Ron's Book p.440, Useful for OLS Loss minimization
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+z
+\series default
+ : (k x 1) vector, 
+\series bold
+A
+\series default
+ : (k x j) matrix, 
+\series bold
+w
+\series default
+ : (j x 1) vector 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\vartheta z'Aw}{\vartheta z}=Aw$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\vartheta z'Aw}{\vartheta w}=A'w$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\vartheta z'Az}{\vartheta z}=2Az$
+\end_inset
+
+, where k=j and A is a symmetric (A'=A)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\vartheta z'w}{\vartheta z}=w$
+\end_inset
+
+ (k=j)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\vartheta z'w}{\vartheta w}=z$
+\end_inset
+
+, (k=j)
+\end_layout
+
+\begin_layout Section*
+2.
+ Summarize the classical assumptions of GLM 
+\end_layout
+
+\begin_layout Itemize
+E(Y) = x
+\begin_inset Formula $\beta$
+\end_inset
+
+ and E(
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+)=0
+\end_layout
+
+\begin_layout Itemize
+Cov(Y) = 
+\begin_inset Formula $\sigma^{2}I$
+\end_inset
+
+ = Cov(
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+) = E(
+\begin_inset Formula $\varepsilon\varepsilon'$
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Itemize
+x is a fixed matrix of values with rank(x) = k, where k = unknown parameters
+\end_layout
+
+\begin_layout Section*
+3.
+ OLS objective function
+\end_layout
+
+\begin_layout Itemize
+S = e'e, OLS minize S
+\end_layout
+
+\begin_layout Itemize
+S = e'e = (y–x
+\begin_inset Formula $\beta$
+\end_inset
+
+)'(y–x
+\begin_inset Formula $\beta$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+FOC 
+\begin_inset Formula $\beta$
+\end_inset
+
+: –2X'y + 2X'X
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+=0 
+\begin_inset Formula $\mapsto$
+\end_inset
+
+ X'y = X'X
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\mapsto$
+\end_inset
+
+ (X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'y =
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+SOC 
+\begin_inset Formula $\beta$
+\end_inset
+
+: 2X'X is positive definite
+\end_layout
+
+\begin_layout Section*
+4.
+ Gauss-Markov
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ in OLS is unbiased and efficient within the class of linear, unbiased estimator
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ = (X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'y =(X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'(X
+\begin_inset Formula $\beta$
+\end_inset
+
++e) = (X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'X
+\begin_inset Formula $\beta$
+\end_inset
+
++(X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'e
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+= 
+\begin_inset Formula $\beta$
+\end_inset
+
++(X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'e
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+E(
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+) = E(
+\begin_inset Formula $\beta$
+\end_inset
+
++(X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'e) = 
+\begin_inset Formula $\beta$
+\end_inset
+
+ + 0 = 
+\begin_inset Formula $\beta$
+\end_inset
+
+ , unbias
+\end_layout
+
+\begin_layout Itemize
+Cov(
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+) = E[(
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+–E(
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+))(
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+–E(
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+))'] = E[(
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+–
+\begin_inset Formula $\beta$
+\end_inset
+
+)(
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+–
+\begin_inset Formula $\beta$
+\end_inset
+
+)']= E[(X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'ee'X(X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+]
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+= (X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'E(ee')X(X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+, where E(ee') = 
+\begin_inset Formula $\sigma^{2}I$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+= 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+(X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'X(X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+= 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+(X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Cov(Y) = E(e'e) = E(e'M'Me)=E(e'Me)=E(tr(e'Me))=E(tr(M)e'e)=tr(M)E(e'e)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+=(n–k)
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\frac{\hat{e}'\hat{e}}{n-k}$
+\end_inset
+
+ = 
+\begin_inset Formula $s^{2}$
+\end_inset
+
+, sample variance to make it unbiased estimator of 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ 
+\begin_inset Formula $\mapsto$
+\end_inset
+
+ 
+\begin_inset Formula $E(\frac{\hat{e}'\hat{e}}{n-k})$
+\end_inset
+
+ = E(
+\begin_inset Formula $s^{2}$
+\end_inset
+
+) = 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+5.
+ Consistent estimator of 
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+ converges in probability to 
+\begin_inset Formula $\theta$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+then we say it is a consistent estimator
+\end_layout
+
+\begin_layout Itemize
+plim 
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+, consistent estimator as follows:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+plim
+\begin_inset Formula $\hat{\beta}$
+\end_inset
+
+ = 
+\begin_inset Formula $\beta$
+\end_inset
+
++ plim(X'X)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'e = 
+\begin_inset Formula $\beta$
+\end_inset
+
++ plim(X'X
+\begin_inset Formula $\frac{n}{n}$
+\end_inset
+
+)
+\begin_inset Formula $^{-1}$
+\end_inset
+
+X'e =
+\begin_inset Formula $\beta$
+\end_inset
+
++ plim(X'X
+\begin_inset Formula $\frac{1}{n}$
+\end_inset
+
+)
+\begin_inset Formula $^{-1}\frac{X'e}{n}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+=
+\begin_inset Formula $\beta$
+\end_inset
+
+ + plim(X'X
+\begin_inset Formula $\frac{1}{n}$
+\end_inset
+
+)
+\begin_inset Formula $\cdot$
+\end_inset
+
+0 =
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+plim 
+\begin_inset Formula $s^{2}=\frac{\hat{e}'\hat{e}}{n-k}=$
+\end_inset
+
+ 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+, consistent estimator as follows:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $s^{2}=\frac{\hat{e}'\hat{e}}{n-k}=\frac{e'Me}{n-k}=\frac{e'(I-P)e}{n-k}=\frac{e'e-e'X(X'X)^{-1}X'e}{n-k}=\frac{e'e}{n-k}-\frac{e'X(X'X)^{-1}X'e}{n-k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+plim 
+\begin_inset Formula $s^{2}$
+\end_inset
+
+ 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+plim(
+\begin_inset Formula $\frac{e'e}{n-k}$
+\end_inset
+
+) – plim (
+\begin_inset Formula $\frac{e'X(X'X)^{-1}X'e}{n-k}$
+\end_inset
+
+) 
+\begin_inset Formula $\rightarrow\sigma^{2}$
+\end_inset
+
+– plim (
+\begin_inset Formula $\frac{e'X(X'X)^{-1}X'e}{n-k}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\rightarrow\sigma^{2}$
+\end_inset
+
+, where plim (
+\begin_inset Formula $\frac{e'X(X'X)^{-1}X'e}{n-k}$
+\end_inset
+
+) = 0 as 
+\begin_inset Formula $\frac{(X'X)^{-1}}{n}\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+6.
+ R
+\begin_inset Formula $^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Simple regression case, 1 exogeneous variable``
+\end_layout
+
+\begin_layout Itemize
+R
+\begin_inset Formula $^{2}$
+\end_inset
+
+ measures the precentage of variations in 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\hat{Y}$
+\end_inset
+
+ can be explained by the regression model
+\end_layout
+
+\begin_layout Itemize
+SST = total sum of squares = (Y–
+\begin_inset Formula $\bar{Y}$
+\end_inset
+
+)(Y–
+\begin_inset Formula $\bar{Y}$
+\end_inset
+
+)'
+\end_layout
+
+\begin_layout Itemize
+SSE = error sum of squares = (Y–
+\begin_inset Formula $\hat{Y}$
+\end_inset
+
+)(Y–
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\hat{Y}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)'
+\end_layout
+
+\begin_layout Itemize
+SSR = sum of square residuals = SST – SSE = (
+\begin_inset Formula $\hat{Y}$
+\end_inset
+
+–
+\begin_inset Formula $\bar{Y}$
+\end_inset
+
+)(
+\begin_inset Formula $\hat{Y}$
+\end_inset
+
+–
+\begin_inset Formula $\bar{Y}$
+\end_inset
+
+)'
+\end_layout
+
+\begin_layout Itemize
+R
+\begin_inset Formula $^{2}$
+\end_inset
+
+= 
+\begin_inset Formula $\frac{SSR}{SST}$
+\end_inset
+
+= 
+\begin_inset Formula $\frac{SST-SSE}{SST}=1-\frac{SSE}{SST}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Reference
+\end_layout
+
+\begin_layout Itemize
+Mittelhammer, R.C.
+ and Mittelhammer, R.C., 1996.
+ Mathematical statistics for economics and business (Vol.
+ 78).
+ New York: Springer.
+\end_layout
+
+\begin_layout Itemize
+Fomby, T.B., Hill, R.C.
+ and Johnson, S.R., 2012.
+ Advanced econometric methods.
+ Springer Science & Business Media.
+\end_layout
+
+\end_body
+\end_document
